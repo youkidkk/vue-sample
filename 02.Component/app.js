@@ -1,3 +1,4 @@
+// コンポーネントの宣言
 Vue.component("sample-component", {
     props: ["id", "text"],
     template: "<li>{{id}} : {{text}}</li>"
