@@ -1,0 +1,14 @@
+{
+  "name": "vue-sample",
+  "version": "1.0.0",
+  "description": "",
+  "main": "01.Hello_Vue.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "eslint": "^6.0.1"
+  }
+}

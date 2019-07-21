@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hello Vue.js.</title>
+
+    <!-- Vue.js のスクリプト読み込み-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <!-- elプロパティで指定したIDを設定 -->
+    <div id="app">
+        <!-- v-bind : dataプロパティの値を属性値に割当-->
+        <h1 v-bind:align="align">
+            <!-- dataプロパティのデータの利用-->
+            {{ title }}
+        </h1>
+
+        <!-- v-on : イベント発生時にメソッドを実行 -->
+        <button v-on:click="switchSeen">表示</button>
+
+        <!-- v-if : 要素の有無を設定 -->
+        <label v-if="seen">見える？？？</label>
+
+        <!-- v-for : 配列の繰り返し -->
+        <ul>
+            <li v-for="item in items">
+                {{item.id}} : {{ item.text }}
+            </li>
+        </ul>
+
+        <!-- v-model : 要素にデータ値を紐付ける -->
+        <input v-model="newItem.text" />
+        <button v-on:click="addItem">Add</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
