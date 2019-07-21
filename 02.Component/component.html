@@ -13,6 +13,9 @@
 
 <body>
     <div id="app">
+        <input v-model="newItem.text" />
+        <button v-on:click="addItem">Add</input>
+
         <!--
             作成したコンポーネントの利用
             ・タグ名を作成したコンポーネント名とする
@@ -20,7 +23,7 @@
         -->
         <sample-component v-for="item in items"
                 v-bind:id="item.id"
-                v-bind:text="item.text" />
+                v-bind:text="item.text"></sample-component>
     </div>
     <script src="app.js"></script>
 </body>

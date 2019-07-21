@@ -18,6 +18,23 @@ var app = new Vue({
                 id: 3,
                 text: "Item 3"
             }
-        ]
+        ],
+        newItem: {
+            id: 4,
+            text: ""
+        }
+    },
+    methods: {
+        addItem: function () {
+            if (this.newItem.text == "") {
+                return
+            }
+            this.items.push({
+                id: this.newItem.id,
+                text: this.newItem.text
+            })
+            this.newItem.id++
+            this.newItem.text = ""
+        }
     }
 })
