@@ -38,7 +38,7 @@ var app = new Vue({
                 id: this.newItem.id,
                 text: this.newItem.text
             })
-            this.newItem.id = this.newItem.id + 1
+            this.newItem.id++
             this.newItem.text = ""
         }
     }
