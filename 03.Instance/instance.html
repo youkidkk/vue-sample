@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Instance sample.</title>
+
+    <!-- Vue.js のスクリプト読み込み-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body>
+    <div id="reactive">
+        <label>{{message.text}}</label>
+    </div>
+    <div id="lifecycle">
+        <button v-on:click="update">Update</button>
+        <label>{{message.text}}</label>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
