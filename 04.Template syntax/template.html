@@ -13,8 +13,12 @@
 
 <body>
     <div id="app">
-        <label>{{text}}</label>
-        <label v-html="text"></label>
+        <!-- Mustache構文 -->
+        <p>{{text1}}</p>
+        <!-- JavaScript式 -->
+        <p>{{ text1.split("").reverse().join("") }}</p>
+        <!-- RawHTML: 生のHTMLとして扱う -->
+        <p v-html="text2"></p>
     </div>
     <script src="app.js"></script>
 </body>

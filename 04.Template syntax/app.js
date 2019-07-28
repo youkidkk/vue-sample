@@ -1,6 +1,7 @@
 var app = new Vue({
     el: "#app",
     data: {
-        text: "<strong>Sample text</strong>"
+        text1: "Sample text",
+        text2: "<strong>Raw HTML</strong>"
     },
 })
