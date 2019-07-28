@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Class & Style Binding sample.</title>
+
+    <!-- Vue.js のスクリプト読み込み-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+
+<body>
+    <div id="app">
+        <!-- classの要素を個別で指定 -->
+        <p v-bind:class="{ red: style.red, bold: style.bold }">Sample Text</p>
+        <!-- classをオブジェクトで指定 -->
+        <p v-bind:class="style">Sample Text</p>
+        <!-- 配列構文 : 配列でclassの要素を指定 -->
+        <p v-bind:class="[ style.red ? 'red' : '', style.bold ? 'bold' : '' ]">Sample Text</p>
+
+        <button v-on:click="toggleRed">Red</button>
+        <button v-on:click="toggleBold">Bold</button>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
