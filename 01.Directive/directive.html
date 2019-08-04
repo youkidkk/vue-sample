@@ -21,10 +21,13 @@
         </h1>
 
         <!-- v-on : イベント発生時にメソッドを実行 -->
-        <button v-on:click="switchSeen">表示</button>
+        <button v-on:click="add">Add</button>
 
-        <!-- v-if : 要素の有無を設定 -->
-        <label v-if="seen">見える？？？</label>
+        <label>{{counter}} / 3 = {{Math.floor(counter / 3)}} </label>
+        <!-- v-if、v-else-if、v-else : 条件付き表示 -->
+        <label v-if="counter % 3 == 0">...0</label>
+        <label v-else-if="counter % 3 == 1">...1</label>
+        <label v-else>...2</label>
 
         <!-- v-for : 配列の繰り返し -->
         <ul>

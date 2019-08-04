@@ -6,7 +6,7 @@ var app = new Vue({
     data: {
         title: "01.Directive",
         align: "center",
-        seen: false,
+        counter: 0,
         items: [{
                 id: 1,
                 text: "Item 1"
@@ -27,8 +27,8 @@ var app = new Vue({
     },
     // methodsプロパティ
     methods: {
-        switchSeen: function () {
-            this.seen = !this.seen
+        add: function () {
+            this.counter++
         },
         addItem: function () {
             if (this.newItem.text == "") {
